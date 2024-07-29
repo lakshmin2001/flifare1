@@ -1,0 +1,131 @@
+/* General styles */
+body {
+  background: linear-gradient(to bottom, #e4ddec, 20%, #c6adee 50%, #f7e3e3 100%);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-page {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+}
+.contactn {
+  text-align: center;
+  background-color: red;
+  float: right;
+}
+.header, .footer {
+  background: #7ba2e0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header h1, .footer p {
+  margin: 0;
+}
+
+.header {
+  font-size: 24px;
+}
+
+.footer {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007BFF;
+}
+
+.contact-header h2 {
+  font-size: 32px;
+  color: #333;
+  margin: 0;
+}
+
+.contact-information, .hours-of-operation {
+  background: #f5f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-information h3, .hours-of-operation h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-information p, .hours-of-operation p {
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-method i {
+  font-size: 24px;
+  color: #007BFF;
+}
+
+.contact-method p {
+  margin: 0;
+}
+
+.contact-method a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.contact-method a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 15px;
+  }
+
+  .contact-header h2 {
+    font-size: 24px;
+  }
+
+  .contact-information, .hours-of-operation {
+    padding: 15px;
+  }
+
+  .contact-information h3, .hours-of-operation h3 {
+    font-size: 20px;
+  }
+
+  .contact-information p, .hours-of-operation p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,130 @@
+/* Post Container */
+.post {
+  border: 2px solid #ddd;
+  margin: 20px auto;
+  background-color: #fff;
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background: linear-gradient(to right, #e0e8ff, #ffe0e8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Post Header and Footer */
+.post-header, .post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  gap: 10px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.username, .days-ago {
+  display: flex;
+  align-items: center;
+}
+
+.user, .bookmark {
+  font-size: 1em;
+}
+
+.post-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.post-content {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9em;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.post-footer span, .share-button, .copied-message {
+  flex-shrink: 0;
+}
+
+.post-footer .share-button {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #007bff;
+}
+
+.copy-link-text {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+
+.share-button:hover .copy-link-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.copied-message {
+  margin-left: 10px;
+  color: green;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .post {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .post-header, .post-footer {
+    justify-content: space-between; /* Ensure items are spaced out */
+    gap: 5px; /* Reduce the gap between items */
+  }
+
+  .post-footer .share-button {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-title {
+    font-size: 1.1em;
+  }
+
+  .post-content {
+    font-size: 0.9em;
+  }
+}

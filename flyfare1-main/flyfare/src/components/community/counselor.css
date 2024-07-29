@@ -1,0 +1,177 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #e94e77;
+  --background-color: #f9f9f9;
+  --card-bg-color: #fff;
+  --font-color: #333;
+  --border-radius: 10px;
+  --transition-speed: 0.3s;
+}
+
+.counselor {
+  width: 30vw;
+  background-color: var(--card-bg-color);
+  padding: 1vw;
+  border: 1px solid #ddd;
+  float: left;
+  position: relative;
+  z-index: 1;
+  margin-right: -3vw;
+  border-radius: var(--border-radius);
+  margin-left: 2vw;
+  transition: transform var(--transition-speed);
+}
+
+.counselor:hover {
+  transform: scale(1.05);
+}
+
+.counselor-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 2vw;
+  background: linear-gradient(to right, #e0e8ff, #ffe0e8);
+  font-family: Arial, sans-serif;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow var(--transition-speed);
+}
+
+.counselor-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.counselor-card img {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  margin-right: 1vw;
+  margin-bottom: 10vw;
+  border: 2px solid var(--primary-color);
+}
+
+.counselor-info {
+  text-align: left;
+  margin-left: -0.5vw;
+}
+
+.counselor-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--font-color);
+}
+
+.counselor-info p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.rating, .languages, .price {
+  margin-top: 1vw;
+  font-size: 0.9rem;
+}
+
+.rating span {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5vw 1vw;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.price span {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.5vw 1vw;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.counselor-details {
+  width: 80%;
+  max-width: 600px;
+  background: var(--card-bg-color);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 3vw;
+  position: relative;
+  top: -15%;
+  overflow-y: auto;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
+  transition: transform var(--transition-speed);
+}
+
+/* .counselor-details:hover {
+  transform: scale(1.02);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.details-content {
+  padding: 2vw;
+  flex: 1;
+  overflow-y: auto;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+}
+
+.details-content h4 {
+  margin-top: 2vw;
+} */
+
+.skeleton-wrapper {
+  margin-bottom: 2vw;
+}
+
+@media (max-width: 768px) {
+  .counselor {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .counselor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .counselor-card img {
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto 1vw;
+  }
+
+  .counselor-details {
+    width: 95%;
+    height: 90%;
+    border-radius: 5%;
+    padding: 1vw;
+  }
+}

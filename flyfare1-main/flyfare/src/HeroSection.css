@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+  background: linear-gradient(to bottom, #f5f7fa, 20%, #b898ec 50%, #9e74e2 100%);
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  
+}
+
+.hero-section {
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.hero-text-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text-content h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text-content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #9e74e2;
+  border: 2px solid #9e74e2;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button:hover {
+  background-color: #9e74e2;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.hero-image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.hero-image-content img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 575px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-text-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-text-content p {
+    font-size: 14px;
+  }
+
+  .hero-image-content img {
+    max-height: 70vh;
+    width: auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 15%;
+  }
+
+  .hero-text-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-text-content p {
+    font-size: 16px;
+  }
+
+  .hero-image-content img {
+    max-height: 70vh;
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-section {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .hero-text-content h1 {
+    font-size: 45px;
+    
+  }
+
+  .hero-text-content p {
+    font-size: 18px;
+  }
+
+  .hero-image-content img {
+    max-height: 70vh;
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    flex-direction: row;
+    padding: 50px;
+  }
+}
